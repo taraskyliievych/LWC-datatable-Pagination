@@ -1,0 +1,37 @@
+<template>
+    <lightning-card>
+        <lightning-layout class="slds-align_absolute-center">
+            <lightning-layout-item>
+                <lightning-button-icon
+                    variant="bare"
+                    icon-name="utility:arrow_left"
+                    disabled={isFirstPage}
+                    onclick={handleFirstPage}
+                ></lightning-button-icon>
+                <lightning-button-icon
+                    variant="bare"
+                    icon-name="utility:chevronleft"
+                    disabled={isFirstPage}
+                    onclick={handlePreviousPage}
+                ></lightning-button-icon>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                Page {currentPage} of {totalPages}
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button-icon
+                    variant="bare"
+                    icon-name="utility:chevronright"
+                    disabled={isLastPage}
+                    onclick={handleNextPage}
+                ></lightning-button-icon>
+                <lightning-button-icon
+                    variant="bare"
+                    icon-name="utility:arrow_right"
+                    disabled={isLastPage}
+                    onclick={handleLastPage}
+                ></lightning-button-icon>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>    
+</template>
